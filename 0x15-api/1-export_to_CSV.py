@@ -18,7 +18,7 @@ def to_do_list(employee_id):
     data = response.json()
     for i in data:
         if i.get('id') == employee_id:
-            employee_name = i.get('name')
+            employee_name = i['username']
 
     todos_url =\
         f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}"
