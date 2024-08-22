@@ -19,7 +19,8 @@ def to_do_list(employee_id):
         if i.get('id') == employee_id:
             employee_name = i.get('name')
 
-    todos_url = f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}"
+    todos_url =\
+        f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}"
     response = requests.get(todos_url)
     if response.status_code == 200:
         todos = response.json()
@@ -31,7 +32,8 @@ def to_do_list(employee_id):
     total_tasks = len(todos)
     done_tasks = len(completed_tasks)
 
-    print(f"Employee {employee_name} is done with tasks({done_tasks}/{total_tasks}): ")
+    print(f"Employee\
+ {employee_name} is done with tasks({done_tasks}/{total_tasks}): ")
     for task in completed_tasks:
         print(f"\t {task}")
 
