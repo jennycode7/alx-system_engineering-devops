@@ -52,7 +52,7 @@ Id'], employee_name, row['completed'], row['title']])
             "username": employee_name,
         } for todo in todos
     ]
-    data = { f"{employee_id}": tasks }
+    data = {f"{employee_id}": tasks}
 
     with open(f"{employee_id}.json", mode="w", newline="") as jsonfile:
         json.dump(data, jsonfile)
