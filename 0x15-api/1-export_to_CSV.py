@@ -40,11 +40,10 @@ def to_do_list(employee_id):
 
 
     with open(f"{employee_id}.csv", mode="w", newline="") as csvfile:
-        fieldnames = ["id", "completed", "title"]
         writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
 
         for row in todos:
-            writer.writerow([employee_id, employee_name, row['completed'], row['title']])
+            writer.writerow([row['userId'], employee_name, row['completed'], row['title']])
 
 
 
