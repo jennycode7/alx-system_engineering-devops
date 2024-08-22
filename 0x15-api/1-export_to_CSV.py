@@ -38,13 +38,12 @@ def to_do_list(employee_id):
     for task in completed_tasks:
         print(f"\t {task}")
 
-
     with open(f"{employee_id}.csv", mode="w", newline="") as csvfile:
         writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
 
         for row in todos:
-            writer.writerow([row['userId'], employee_name, row['completed'], row['title']])
-
+            writer.writerow([row['user\
+Id'], employee_name, row['completed'], row['title']])
 
 
 if __name__ == "__main__":
